@@ -2,7 +2,7 @@ import { AppBar, CssBaseline, Fab, Grid, Toolbar, Typography } from '@mui/materi
 import './App.css';
 import AcUnitIcon from '@mui/icons-material/AcUnit';
 import Navi from './components/Navi';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import AllComics from './components/AllComics';
 import AllCharacters from './components/AllCharacters';
 import AllSeries from './components/AllSeries';
@@ -28,16 +28,23 @@ function App() {
 	return (
 		<Router>
 			<CssBaseline />
-			<AppBar position="sticky" sx={{ marginBottom: 5 }} style={{ background: '#de9eaf' }}>
+			<AppBar
+				position="sticky"
+				sx={{ marginBottom: 5 }}
+				style={{ background: 'linear-gradient(180deg, #ed1d24 0%, #1f1f1f 100%)' }}
+			>
 				<Toolbar disableGutters>
 					<Grid container spacing={1} marginTop={0}>
-						<Grid item xs={1} textAlign="right">
+						<Grid item xs={1} textAlign="right" sx={{ paddingRight: '30px', paddingLeft: '10px' }}>
 							<AcUnitIcon sx={{ fontSize: 35 }} />
 						</Grid>
+
 						<Grid item xs={6} padding={1}>
-							<Typography variant="h1" fontSize="26px">
-								<b>My React Marvel App</b>
-							</Typography>
+							<Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+								<Typography variant="h1" fontSize="26px" style={{ fontFamily: 'cursive' }}>
+									<b>My React Marvel App</b>
+								</Typography>
+							</Link>
 						</Grid>
 						<Grid item xs={4} marginRight="5px">
 							<Navi />
@@ -58,8 +65,16 @@ function App() {
 			<footer style={{ marginBottom: '50px' }}>
 				{showButton && (
 					<Fab
-						style={{ position: 'absoulute', right: 0, bottom: 0, margin: '35px', zIndex: 11 }}
-						color="primary"
+						style={{
+							position: 'absoulute',
+							right: 0,
+							bottom: 0,
+							margin: '35px',
+							zIndex: 11,
+							background: 'linear-gradient(180deg, #ed1d24 0%, #1f1f1f 100%)',
+							color: 'white',
+							textShadow: '1px 1px 1px black', // Optional: add text shadow for better contrast
+						}}
 						aria-label="scroll to top"
 						onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
 					>

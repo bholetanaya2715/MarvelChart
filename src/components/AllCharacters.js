@@ -103,6 +103,7 @@ function AllCharacters(props) {
 					gutterBottom
 					className={classes.pageNumTitle}
 					fontSize="32px"
+					style={{ textTransform: 'uppercase', fontFamily: 'cursive' }}
 				>
 					<b> All Marvel Characters </b>
 				</Typography>
@@ -110,14 +111,26 @@ function AllCharacters(props) {
 				<Grid container className={classes.pagination}>
 					<Grid item sm={4}>
 						{pageNum <= '0' ? (
-							<Button variant="contained" disabled style={{ color: '#d18484' }}>
+							<Button
+								variant="contained"
+								disabled
+								style={{
+									background: 'linear-gradient(180deg, #ed1d24 0%, #1f1f1f 100%)',
+									color: 'white',
+									textShadow: '1px 1px 1px black', // Optional: add text shadow for better contrast
+								}}
+							>
 								go to Previous
 							</Button>
 						) : (
 							<Button
 								variant="contained"
 								onClick={() => navigate(`/characters/page/${pageNum * 1 - 1}`)}
-								style={{ color: '#de9eaf' }}
+								style={{
+									background: 'linear-gradient(180deg, #ed1d24 0%, #1f1f1f 100%)',
+									color: 'white',
+									textShadow: '1px 1px 1px black', // Optional: add text shadow for better contrast
+								}}
 							>
 								go to Previous
 							</Button>
@@ -130,14 +143,26 @@ function AllCharacters(props) {
 					</Grid>
 					<Grid item sm={4}>
 						{data && pageNum * 20 + 20 >= data.data.data.total ? (
-							<Button variant="contained" disabled style={{ color: '#d18484' }}>
+							<Button
+								variant="contained"
+								disabled
+								style={{
+									background: 'linear-gradient(180deg, #ed1d24 0%, #1f1f1f 100%)',
+									color: 'white',
+									textShadow: '1px 1px 1px black', // Optional: add text shadow for better contrast
+								}}
+							>
 								go to Next
 							</Button>
 						) : (
 							<Button
 								variant="contained"
 								onClick={() => navigate(`/characters/page/${pageNum * 1 + 1}`)}
-								style={{ color: '#de9eaf' }}
+								style={{
+									background: 'linear-gradient(180deg, #ed1d24 0%, #1f1f1f 100%)',
+									color: 'white',
+									textShadow: '1px 1px 1px black', // Optional: add text shadow for better contrast
+								}}
 							>
 								go to Next
 							</Button>

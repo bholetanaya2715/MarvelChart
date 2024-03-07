@@ -111,7 +111,12 @@ function IndividualCharacter(props) {
 				</CardContent>
 				<Button
 					variant="contained"
-					style={{ marginBottom: '30px' }}
+					style={{
+						marginBottom: '30px',
+						background: 'linear-gradient(180deg, #ed1d24 0%, #1f1f1f 100%)',
+						color: 'white',
+						textShadow: '1px 1px 1px black', // Optional: add text shadow for better contrast
+					}}
 					onClick={() => navigate('/characters/page/0')}
 				>
 					Go Back Characters main page
