@@ -1,21 +1,48 @@
-import { Button, ButtonGroup } from '@mui/material';
+import { Button, ButtonGroup, useMediaQuery } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 
 function Navi() {
-	let navigate = useNavigate();
+	const navigate = useNavigate();
+	const isLargeScreen = useMediaQuery('(min-width:600px)');
+
 	return (
-		<ButtonGroup variant="text" color="inherit" fullWidth={true}>
-			<Button style={{ border: 0 }} onClick={() => navigate('/')} size="large">
-				<b> Explore </b>
+		<ButtonGroup
+			variant="text"
+			color="inherit"
+			fullWidth={!isLargeScreen}
+			sx={{ display: 'flex', flexDirection: isLargeScreen ? 'row' : 'column' }}
+		>
+			<Button
+				style={{ border: 0, minWidth: 'auto' }}
+				onClick={() => navigate('/')}
+				size="large"
+				sx={{ flexGrow: 1 }}
+			>
+				<b>Explore</b>
 			</Button>
-			<Button style={{ border: 0 }} onClick={() => navigate('/characters/page/0')} size="large">
-				<b> Characters </b>
+			<Button
+				style={{ border: 0, minWidth: 'auto' }}
+				onClick={() => navigate('/characters/page/0')}
+				size="large"
+				sx={{ flexGrow: 1 }}
+			>
+				<b>Characters</b>
 			</Button>
-			<Button style={{ border: 0 }} onClick={() => navigate('/comics/page/0')} size="large">
-				<b> Comics</b>
+			<Button
+				style={{ border: 0, minWidth: 'auto' }}
+				onClick={() => navigate('/comics/page/0')}
+				size="large"
+				sx={{ flexGrow: 1 }}
+			>
+				<b>Comics</b>
 			</Button>
-			<Button style={{ border: 0 }} onClick={() => navigate('/series/page/0')} size="large">
-				<b> Series</b>
+			<Button
+				style={{ border: 0, minWidth: 'auto' }}
+				onClick={() => navigate('/series/page/0')}
+				size="large"
+				sx={{ flexGrow: 1 }}
+			>
+				<b>Series</b>
 			</Button>
 		</ButtonGroup>
 	);
