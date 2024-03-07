@@ -1,11 +1,13 @@
 import { Container, Stack, Typography } from '@mui/material';
 import React from 'react';
+import marvelimage from '../marvel-characters.jpg.webp';
 
 function LandingPage(props) {
 	return (
 		<Container
 			maxWidth="lg"
 			sx={{
+				backgroundImage: `url(${marvelimage})`,
 				background: 'linear-gradient(180deg, #ed1d24 0%, #1f1f1f 100%)',
 				minHeight: '100vh',
 				display: 'flex',
