@@ -18,7 +18,7 @@ function LandingPage(props) {
 				<Typography variant="h2"> Welcome to Marvel App!</Typography>
 				<br />
 				<Typography variant="h3" fontSize="32px">
-					Navigate to see characters, series and comics of marvel
+					Please Navigate to see characters, series and comics of marvel
 				</Typography>
 				<br />
 				<Typography variant="h6" fontSize="32px">
