@@ -15,7 +15,7 @@ function LandingPage(props) {
 			}}
 		>
 			<Stack direction="column" justifyContent="center" alignItems="center" spacing={2}>
-				<Typography variant="h2">Hello Welcome to Marvel App!</Typography>
+				<Typography variant="h2"> Welcome to Marvel App!</Typography>
 				<br />
 				<Typography variant="h3" fontSize="32px">
 					Navigate to see characters, series and comics of marvel
