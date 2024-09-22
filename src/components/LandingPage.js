@@ -20,6 +20,7 @@ function LandingPage(props) {
 				<Typography variant="h3" fontSize="32px">
 					Please Navigate to see characters, series and comics of marvel
 				</Typography>
+				<h4>I know</h4>
 				<br />
 				<Typography variant="h6" fontSize="32px">
 					This APP is a one stop app which helps you for searching your favorite character,Comics,
